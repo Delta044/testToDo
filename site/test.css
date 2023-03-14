@@ -1,0 +1,364 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* _______________________________________Слайды___________________________________ */
+
+
+.slider {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow:hidden;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    border: 1px solid rgb(0, 0, 0);
+    border-width: thin;
+}
+
+.slider-wrapper {
+    display: flex;
+    position: relative;
+    justify-content:left;
+    width: 700px;
+    height: 469px;
+    left:0;
+    transition: all ease 1s;
+
+}
+
+.sliderNav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+.active {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.hidden {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ______________________________________Тудушка_____________________________________ */
+
+
+.scrollDiv {
+    width: 1000px;
+    height: 800px;
+    background-color: bisque;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: auto;
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+    border: 1px solid rgb(0, 0, 0);
+    border-width: thin;
+}
+
+.modelWindow {
+    height: 70px;
+    width: 300px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: #ecc92e;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+    border: 1px solid rgb(0, 0, 0);
+    border-width: thin;
+    text-align: center;
+    opacity: 0;
+}
+
+.alertTextP {
+    position: relative;
+    top: 20px
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.todoList {
+    display: flex;
+    justify-content: center;
+}
+
+/* Воод задачи */
+.todoexplanation {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 36px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+    border: 1px solid rgb(0, 0, 0);
+    border-width: thin;
+
+}
+
+.pText {
+    margin-top: 8px;
+}
+
+
+#todoinput {
+    height: 30px;
+    width: 700px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+
+}
+
+/* ++++++Кнопка++++++++++++++++ */
+button {
+    padding: 8px 20px;
+    border-radius: 10px;
+    background-color: #d16464;
+    color: #000000;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+}
+
+button:hover {
+    background-color: #fc0303;
+    color: #fcfcfc;
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+}
+
+/* ++++++Кнопка++++++++++++++++ */
+
+/* ГЛАААВНЫЙ !!!! СЮДА СМОТРИ БЛЯТЬ А НЕ НИЖЕ!!!!дви в котором появляются новый задачи */
+#todoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+/* Главный ДИВ(Чек--ТЕКСТ--Удаление) ============================================================*/
+.todolistTask {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-radius: 10px;
+    height: 40px;
+    width: 700px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 30px;
+    box-shadow: 2px 25px 9px 0px rgba(28, 30, 32, 0.2);
+    border: 1px solid rgb(0, 0, 0);
+    border-width: thin;
+}
+
+/*Галочка для закрытия задания */
+.сompleted {
+    height: auto;
+    width: 30px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgb(56, 145, 75);
+    text-align: center;
+    padding-top: 12px;
+    cursor: default;
+}
+
+.сompleted:hover {
+    background-color: #28e757;
+    color: #fcfcfc;
+
+}
+
+.checkboxInput {
+    height: 5px;
+    width: 5px;
+}
+
+
+/* Текст внутри контейнера ТУДУ задания */
+.titleTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+
+}
+
+.textIn {
+    padding-top: 10px;
+    /* word-break: break-all; */
+
+}
+
+/* Кнопка удаления задания. */
+.deletTask {
+    height: auto;
+    width: 30px;
+    background-color: rgb(240, 93, 93);
+    color: black;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    padding-top: 12px;
+    cursor: default;
+}
+
+.deletTask:hover {
+    background-color: #fc0303;
+    color: #fcfcfc;
+
+}
+
+/* Главный див Кнопка (Чек--ТЕКСТ--Удаление) ============================================================*/

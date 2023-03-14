@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <link rel="stylesheet" href="test.css">
+  <meta charset="Windows 1251">
+  <title>Todo</title>
+</head>
+
+<body> 
+  <!--слайдер-->
+  <div id="globaldivforlisener">
+  <div class="slider" id="mainSlider"><!-- самый внешний контейнер -->
+    <!-- Если картинок на сайте очень много ( IMG), или они увеличиваются или уменьшаяются,   помимо этих img  если и другие, можно назначить автоматически уникальный id = (imag+Newname) с припиской что  или же data  атрибут.  -->
+  <div class="slider-wrapper"><!-- внутренний враппер -->
+    <img src="https://vsegda-pomnim.com/uploads/posts/2022-04/1649332136_64-vsegda-pomnim-com-p-karibskoe-more-plyazh-foto-76.jpg" alt="First" class="active" />
+    <img src="https://krot.info/uploads/posts/2021-11/1637706911_12-krot-info-p-karibskoe-more-oboi-peizazh-krasivoe-foto-12.jpg" alt="Second" class="active" />
+    <img src="https://vsegda-pomnim.com/uploads/posts/2022-03/1647611644_27-vsegda-pomnim-com-p-karibskoe-more-foto-29.jpg" alt="Third" class="active" />
+    <img src="http://vsegda-pomnim.com/uploads/posts/2022-03/1648624103_12-vsegda-pomnim-com-p-karibi-karibskie-ostrova-foto-16.jpg" alt="Four" class="active" />
+  </div>
+
+  </div>
+  <div class="sliderNav"><!-- кнопки "предыдущая" и "следующая" -->
+  <button id="btnBefore" type="button" class="slider-previous">Предыдущий</button>
+  <button id="btnNext" type="button" class="slider-next">Следующий</button>
+  </div>
+  </div>
+
+
+
+
+
+  <!-- =================Тудушка====начало========================= -->
+  <div class="scrollDiv">
+    <div class="modelWindow">
+      <p class="alertTextP"> Пожалуйста добавте текс в поле ввода!</p>
+    </div>
+    <div class="title">
+      <p>ToDoList</p>
+    </div>
+    <!-- Главный контейнер -->
+    <div class="todoList">
+      <div class="todoexplanation">
+        <p class="pText">Enter the task</p>
+      </div>
+      <input id="todoinput" placeholder="Lead a new task for the day..." type="text">
+      <button id="btnNewTask" type="button">Add</button>
+    </div>
+    <!-- Проба копирования -->
+    <!-- <template id="templateDiv">
+      <div class="todolistTask" >
+        <div type="button" class="сompleted"></div>
+        <div class="titlTask">
+          <p class="textIn"></p>
+        </div>
+        <div type="button" class="deletTask"></div>
+      </div>
+    </template> -->
+    <div id="todoContainer">
+      <!--добавляем новый элмементы сюда -->
+    </div>
+    <!-- ==========================================Тудушка  конец======================================================> -->
+  </div>
+  <script src="test.js"></script>
+</body>
+
+</html>
+
